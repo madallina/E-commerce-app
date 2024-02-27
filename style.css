@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stiluri pentru antet */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Stiluri pentru secțiunea principală cu produse */
+#main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+}
+.title-product {
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.product button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Stiluri pentru coșul de cumpărături */
+#sidebar {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 350px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: auto;
+  border-left: 1px solid #ccc;
+}
+.demo-img {
+  height: 230px;
+  width: 150px;
+}
+.btn {
+  float: right;
+}
+#btn-cart,
+#btn-profile {
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.title-cart {
+  font-size: 1.5rem;
+}
+#close-btn {
+  color: white;
+  background-color: rgb(179, 10, 10);
+  float: top;
+  width: 45px;
+  cursor: pointer;
+}
+
+li {
+  padding: 12px;
+  background-color: #cfc9c9;
+  border-radius: 1rem;
+  margin: 20px;
+}
+#cart-total {
+  font-size: 1.2rem;
+}
+.place-order {
+  background-color: #47d468;
+  height: 2rem;
+  width: 10rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem;
+ 
+}
+.qty-container {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.increase-item-btn {
+  width: 1rem;
+}
+.delete-item-btn {
+  width: 1rem;
+}
+.product-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.product-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgb(92, 91, 91);
+  border-radius: 1rem;
+  width: 70%;
+  height: 80%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+}
+.showProduct {
+  display: block;
+}
+.product-details {
+  text-align: center;
+  .image-details {
+    padding: 20px;
+    width: 400px;
+    height: 450px;
+  }
+}
+
+.profile-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: none;
+}
+
+.profile-form h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: calc(100% - 12px);
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#register-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.orderForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 30rem;
+  height: 50rem;
+}
+
+.orderForm h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+#close-order-btn{
+  background-color: #db4f0e;
+  width: 5rem;
+  
+}
+
+.orderForm input[type="text"],
+.orderForm input[type="email"],
+.orderForm input[type="tel"],
+.orderForm button,
+.orderForm input[type="radio"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.orderForm label {
+  font-weight: bold;
+}
+
+
+#main-content {
+  transition: filter 0.3s ease;
+}
+
+#main-content.blur {
+  filter: blur(5px);
+}

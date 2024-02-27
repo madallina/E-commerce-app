@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-commerce App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>E-commerce Store</h1>
+     
+      <button id="btn-profile">
+        <i class="fa-solid fa-right-from-bracket"></i></button>
+        <button id="btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    </header>
+
+    <main id="main-content" class="products"></main>
+
+    <aside id="sidebar" class="cart">
+      <button id="close-btn" class="btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="title-cart">Shopping Cart</div>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button class="place-order" id="placeOrderBtn">Place order</button>
+    </aside>
+
+    <div class="modal" id="product-modal"></div>
+    <div class="product-details">
+      <button
+        type="button"
+        class="btn product-close-btn"
+        id="product-close-btn"
+      ><i class="fa-solid fa-xmark"></i></button>
+      <div class="product-details-content"></div>
+    </div>
+    
+    <div class="orderForm " id="order-form">
+      <form>
+        <button id="close-order-btn" class="btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <h2>Place Your Order</h2>
+    
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+    
+        <label for="paymentMethod">Select Payment Method:</label><br>
+       
+        <label for="cardPayment">Credit Card
+          <input type="radio" id="cardPayment" name="paymentMethod" value="card">
+
+        </label><br>
+        <label for="cashPayment">Cash
+          <input type="radio" id="cashPayment" name="paymentMethod" value="cash">
+        </label><br><br>
+ 
+       
+    
+        <button type="submit" id="order-submit-btn">Submit Order</button>
+      </form>
+    </div>
+    
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
